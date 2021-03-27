@@ -1,0 +1,58 @@
+h1{
+    color:red;
+    text-align: center;
+}
+#main{
+    margin: 0 auto;
+    width: 50vw;
+}
+#description{
+    width: 40vw;
+}
+#category{
+    height: 75px;
+}
+#category,#date{
+    width: 20vw;
+}
+
+ul{
+    list-style-type: none;
+    margin: 3em auto;
+    flex-wrap: wrap;
+    display: flex;
+    /* width: 350px; */
+}
+li{
+    position: relative;
+   
+}
+
+label{
+    font-size: 1rem;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+#description,#category,#date{
+    font-size: 18px;
+    margin: 9px 0 7px 0;
+    padding: 2em 10px 10px 10px;
+    min-width: 200px;
+}
+
+#todo_detail{
+    width: 40vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 10px;
+}
+span{
+    word-wrap: break-word;
+}
+.mar-b-10{
+    margin-bottom: 10px;
+   border-bottom: 1px  solid gray;
+   width: 40vw;
+}

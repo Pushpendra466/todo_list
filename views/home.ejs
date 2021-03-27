@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/home.css">
+    </head>
+    <body>
+        <div id="main">
+        <h1>TODO App</h1>
+        <form action="/todo/add" method="POST">
+            <ul>
+                <li>
+            <input type="text" placeholder="what do you need to do ?" id="description" name="description">
+            <label for="description">DESCRIPTION</label>
+                </li>
+                <li>
+            <select name="category" id="category"> 
+                <option value="none" selected disabled hidden> choose a category </option> 
+                <option value="Personal">Personal</option> 
+                <option value="Work">Work </option>  
+                <option value="School">School </option>
+                <option value="Cleaning">Cleaning </option>
+                <option value="Other">Other</option>
+            </select> 
+            <label for="category">CATEGORY</label>
+                </li>
+            <li>
+            <input type="date" id="date" name="due_date" min=<%=min_dt%>>
+            <label for="date">DUE DATE</label>
+            </li>
+        </ul>
+        <button >ADD Task</button>
+            
+            <!-- <ul style="display: block;">
+                <% for(let todo of todos) {%>
+                    <li class="mar-b-10">
+                        <div id="todo_detail">     
+                        <div style="padding: -150px;">
+                        <input type="checkbox" name="check" value="<%= todo.description %>" class="checkbox"> 
+                        <span><%= todo.description %></span></div>
+                        <div><%= todo.category %></div>
+                        </div>
+                        <div><i class="far fa-calendar-alt"></i>&nbsp;<%= todo.due_date %></div>
+                    </li>
+                <%}%>
+            </ul>
+            <button formaction="/todo/delete" type="submit" formmethod="GET">Delete</button> -->
+        </form>
+        
+
+        <div>
+           <form action="/todo/delete" method="POST">
+            <button type="submit">Delete</button>
+            <ul style="display: block;">
+                <% for(let todo of todos) {%>
+                    <li class="mar-b-10">
+                        <div id="todo_detail">     
+                        <div style="padding: -150px;">
+                        <input type="checkbox" name="check" value="<%= todo.description %>" class="checkbox"> 
+                        <span><%= todo.description %></span></div>
+                        <div><%= todo.category %></div>
+                        </div>
+                        <div><i class="far fa-calendar-alt"></i>&nbsp;<%= todo.due_date %></div>
+                    </li>
+                <%}%>
+            </ul>
+        </form>
+        </div>
+        </div>
+        <script src="https://kit.fontawesome.com/57790f0bc8.js" crossorigin="anonymous"></script>
+        <!-- <script src="" async defer></script> -->
+    </body>
+</html>
