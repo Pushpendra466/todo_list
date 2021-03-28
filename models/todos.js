@@ -11,7 +11,6 @@ const todosSchema = mongoose.Schema({
     },
     due_date : {
         type : String,
-        default : 'NO DEADLINE'
     }
 });
 
