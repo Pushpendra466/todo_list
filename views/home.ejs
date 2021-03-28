@@ -14,11 +14,11 @@
         <form action="/todo/add" method="POST">
             <ul>
                 <li>
-            <input type="text" placeholder="what do you need to do ?" id="description" name="description">
+            <input type="text" placeholder="what do you need to do ?" id="description" name="description" required>
             <label for="description">DESCRIPTION</label>
                 </li>
                 <li>
-            <select name="category" id="category"> 
+            <select name="category" id="category" required> 
                 <option value="none" selected disabled hidden> choose a category </option> 
                 <option value="Personal">Personal</option> 
                 <option value="Work">Work </option>  
@@ -60,7 +60,7 @@
                     <li class="mar-b-10">
                         <div id="todo_detail">     
                         <div style="padding: -150px;">
-                        <input type="checkbox" name="check" value="<%= todo.description %>" class="checkbox"> 
+                        <input type="checkbox" name="check" value="<%= todo._id %>" class="checkbox"> 
                         <span><%= todo.description %></span></div>
                         <div><%= todo.category %></div>
                         </div>
