@@ -1,3 +1,7 @@
+body{
+  
+    background-image: linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%);
+}
 h1{
     color:red;
     text-align: center;
@@ -5,12 +9,26 @@ h1{
 #main{
     margin: 0 auto;
     width: 50vw;
+   
+}
+#detail-todo{
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+}
+.transparent{
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid gray;
 }
 #description{
     width: 40vw;
 }
 #category{
-    height: 75px;
+    height: 73px;
+    border-right: 1px solid gray;
 }
 #category,#date{
     width: 20vw;
@@ -54,5 +72,37 @@ span{
 .mar-b-10{
     margin-bottom: 10px;
    border-bottom: 1px  solid gray;
-   width: 40vw;
+   width: 45vw;
+}
+#add-btn,#dlt-btn{
+ 
+    border: none;
+    border-radius: 5px;
+    background-color: gray;
+    padding: 8px;
+    color: white;
+    margin-left: 40%;
+    font-size: 1.2rem;
+    position: relative;
+}
+#dlt-btn{
+    /* position: absolute; */
+    margin-left: 42%;
+    margin-top: 10px;
+    background-color: red;
+    width: 120px;
+
+   /* top: 52.5%; */
+}
+#bottom{
+    margin-left: -3%;
+}
+.tasks{
+    margin-top: 10px;
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    padding: 10px;
 }

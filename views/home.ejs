@@ -10,15 +10,16 @@
     </head>
     <body>
         <div id="main">
+            <div id="detail-todo">
         <h1>TODO App</h1>
         <form action="/todo/add" method="POST">
             <ul>
                 <li>
-            <input type="text" placeholder="what do you need to do ?" id="description" name="description" required>
+            <input type="text" placeholder="what do you need to do ?" id="description" name="description" class="transparent" required>
             <label for="description">DESCRIPTION</label>
                 </li>
                 <li>
-            <select name="category" id="category" required> 
+            <select name="category" id="category" class="transparent" required> 
                 <option value="none" selected disabled hidden> choose a category </option> 
                 <option value="Personal">Personal</option> 
                 <option value="Work">Work </option>  
@@ -29,40 +30,40 @@
             <label for="category">CATEGORY</label>
                 </li>
             <li>
-            <input type="date" id="date" name="due_date" min=<%=min_dt%>>
+            <input type="date" id="date" name="due_date" class="transparent" min=<%=min_dt%> >
             <label for="date">DUE DATE</label>
             </li>
         </ul>
-        <button >ADD Task</button>
-            
-            <!-- <ul style="display: block;">
-                <% for(let todo of todos) {%>
-                    <li class="mar-b-10">
-                        <div id="todo_detail">     
-                        <div style="padding: -150px;">
-                        <input type="checkbox" name="check" value="<%= todo.description %>" class="checkbox"> 
-                        <span><%= todo.description %></span></div>
-                        <div><%= todo.category %></div>
-                        </div>
-                        <div><i class="far fa-calendar-alt"></i>&nbsp;<%= todo.due_date %></div>
-                    </li>
-                <%}%>
-            </ul>
-            <button formaction="/todo/delete" type="submit" formmethod="GET">Delete</button> -->
+        <button id="add-btn" ><i class="fas fa-plus-square"></i>&nbsp;ADD Task</button>
         </form>
-        
+        </div>
 
-        <div>
+        <div id="bottom">
            <form action="/todo/delete" method="POST">
-            <button type="submit">Delete</button>
+            <button type="submit" id="dlt-btn"><i class="fas fa-trash-alt"></i>&nbsp;Delete</button>
             <ul style="display: block;">
                 <% for(let todo of todos) {%>
-                    <li class="mar-b-10">
-                        <div id="todo_detail">     
+                    <li class="mar-b-10 tasks" >
+                        <div id="todo_detail" >     
                         <div style="padding: -150px;">
                         <input type="checkbox" name="check" value="<%= todo._id %>" class="checkbox"> 
                         <span><%= todo.description %></span></div>
-                        <div><%= todo.category %></div>
+                        <% if(todo.category == 'Work') {%> 
+                            <div style="background-color: green;padding-left: 10px;padding-right: 10px;"><%= todo.category %></div>
+                            <%}%>
+                        <% if(todo.category == 'School') {%> 
+                            <div style="background-color: orange;padding-left: 10px;padding-right: 10px;"><%= todo.category %></div>
+                            <%}%>
+                        <% if(todo.category == 'Cleaning') {%> 
+                            <div style="background-color: orangered;padding-left: 10px;padding-right: 10px;"><%= todo.category %></div>
+                            <%}%>
+                        <% if(todo.category == 'Other') {%> 
+                            <div style="background-color: royalblue;padding-left: 10px;padding-right: 10px;"><%= todo.category %></div>
+                            <%}%>
+                        <% if(todo.category == 'Personal') {%> 
+                            <div style="background-color: yellowgreen;padding-left: 10px;padding-right: 10px;"><%= todo.category %></div>
+                            <%}%>
+                        <!-- <div><%= todo.category %></div> -->
                         </div>
                         <div><i class="far fa-calendar-alt"></i>&nbsp;<%= todo.due_date %></div>
                     </li>
