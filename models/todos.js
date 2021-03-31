@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-
+//Schema for a todo
 const todosSchema = mongoose.Schema({
     description : {
         type : String,

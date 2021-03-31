@@ -1,16 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
 body{
-  
+    font-family: 'Roboto Slab', serif;
     background-image: linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%);
 }
 h1{
-    color:red;
+    color:gray;
     text-align: center;
 }
 #main{
-    margin: 0 auto;
+    /* to center the div */
+    margin: 0 auto; 
     width: 50vw;
    
 }
+ 
 #detail-todo{
     background: rgba( 255, 255, 255, 0.25 );
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
@@ -39,7 +42,6 @@ ul{
     margin: 3em auto;
     flex-wrap: wrap;
     display: flex;
-    /* width: 350px; */
 }
 li{
     position: relative;
@@ -86,13 +88,10 @@ span{
     position: relative;
 }
 #dlt-btn{
-    /* position: absolute; */
     margin-left: 42%;
     margin-top: 10px;
     background-color: red;
     width: 120px;
-
-   /* top: 52.5%; */
 }
 #bottom{
     margin-left: -3%;

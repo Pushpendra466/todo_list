@@ -4,6 +4,7 @@ const port = 8080;
 const db = require('./config/mongoose'); 
 const app = express();
 
+//middleware for the urlencoded inputs from thr form
 app.use(express.urlencoded({extended:true}))
 
 //to use express router

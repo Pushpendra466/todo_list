@@ -1,26 +1,3 @@
-// let todos = [{
-//     description : 'javascript',
-//     category : 'school',
-//     due_date : '28-03-2021'
-// },
-// {
-//     description : 'javascript',
-//     category : 'school',
-//     due_date : '28-03-2021'
-// },
-// {
-//     description : 'javascript',
-//     category : 'school',
-//     due_date : '28-03-2021'
-// },
-// {
-//     description : 'javascript',
-//     category : 'school',
-//     due_date : '28-03-2021'
-// },
-// ]
-// module.exports = todos;
-
 const Todos = require('../models/todos');
 
 module.exports.home = (req,res) =>{
@@ -30,6 +7,7 @@ module.exports.home = (req,res) =>{
     {month = '0'+month}
     let min_dt = dt.getFullYear() + '-' + month + '-' +dt.getDate();
     
+    // displaying the todos on home page 
     Todos.find({}, (err, todos)=>{
         if(err){
             console.log('Error in fetching todos from db');

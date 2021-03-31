@@ -48,6 +48,7 @@
                         <div style="padding: -150px;">
                         <input type="checkbox" name="check" value="<%= todo._id %>" class="checkbox"> 
                         <span><%= todo.description %></span></div>
+                        <!-- checkin category gor background color  -->
                         <% if(todo.category == 'Work') {%> 
                             <div style="background-color: green;padding-left: 10px;padding-right: 10px;"><%= todo.category %></div>
                             <%}%>
@@ -63,7 +64,6 @@
                         <% if(todo.category == 'Personal') {%> 
                             <div style="background-color: yellowgreen;padding-left: 10px;padding-right: 10px;"><%= todo.category %></div>
                             <%}%>
-                        <!-- <div><%= todo.category %></div> -->
                         </div>
                         <div><i class="far fa-calendar-alt"></i>&nbsp;<%= todo.due_date %></div>
                     </li>
